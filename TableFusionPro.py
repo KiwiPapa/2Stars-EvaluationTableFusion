@@ -1,15 +1,7 @@
 # coding=utf-8
 import os
-import random
-import smtplib
-import shutil
 import sys
-import threading
-import qdarkstyle
-import time
-from datetime import datetime, timedelta
-from email.header import Header
-from email.mime.text import MIMEText
+import xlutils
 
 import numpy as np
 import openpyxl
@@ -17,14 +9,7 @@ import pandas as pd
 import xlrd
 import xlwt
 from xlutils.copy import copy
-from changeOffice import Change
-from docx import Document
-from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT
-from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
-from docx.oxml.ns import qn
-from docx.shared import Cm, Inches, Pt, RGBColor
 from openpyxl import load_workbook
-from PIL import Image
 from PyQt5 import QtCore, QtGui, QtWidgets, QtNetwork
 from PyQt5.QtCore import QBasicTimer, QDateTime, Qt, QTimer
 from PyQt5.QtPrintSupport import QPageSetupDialog, QPrintDialog, QPrinter
@@ -60,6 +45,11 @@ class Main_window(QMainWindow, Ui_MainWindow):
         self.pushButton_28.clicked.connect(self.table_process3)
         self.pushButton_15.clicked.connect(self.table_fusion_reaction)
 
+        self.action.triggered.connect(self.menubar_simple_instruction)
+        self.action_2.triggered.connect(self.menubar_author_info)
+
+        self.pushButton_16.clicked.connect(self.search_for_statistic_result)
+
     # 函数定义集结地
     def mkdir(self, path):
         path = path.strip()  # 去除首位空格
@@ -90,7 +80,10 @@ class Main_window(QMainWindow, Ui_MainWindow):
         df_temp = df1.loc[(df1['井段Start'] >= formation_Start) & (df1['井段Start'] <= formation_End), :]
         # 获取起始深度到第一层井段底界的结论
         df_temp_start_to_first_layer = df1.loc[(df1['井段Start'] <= formation_Start), :]
-        start_to_upper_result = df_temp_start_to_first_layer.loc[len(df_temp_start_to_first_layer), '结论']
+        if len(df_temp_start_to_first_layer) != 0:  # 若为空dataframe
+            start_to_upper_result = df_temp_start_to_first_layer.loc[len(df_temp_start_to_first_layer), '结论']
+        elif len(df_temp_start_to_first_layer) == 0: # 若不为空dataframe
+            start_to_upper_result = df1.loc[1, '结论']
         # 获取calculation_Start所在段的声幅值
         df_temp_formation_Start = df1.loc[(df1['井段Start'] <= formation_Start) & (
                 df1['井段End'] >= formation_Start), :]
@@ -202,7 +195,10 @@ class Main_window(QMainWindow, Ui_MainWindow):
         df_temp = df1.loc[(df1['井段Start'] >= formation_Start) & (df1['井段Start'] <= formation_End), :]
         # 获取起始深度到第一层井段底界的结论
         df_temp_start_to_first_layer = df1.loc[(df1['井段Start'] <= formation_Start), :]
-        start_to_upper_result = df_temp_start_to_first_layer.loc[len(df_temp_start_to_first_layer), '结论']
+        if len(df_temp_start_to_first_layer) != 0:  # 若为空dataframe
+            start_to_upper_result = df_temp_start_to_first_layer.loc[len(df_temp_start_to_first_layer), '结论']
+        elif len(df_temp_start_to_first_layer) == 0:  # 若不为空dataframe
+            start_to_upper_result = df1.loc[1, '结论']
         # 获取calculation_Start所在段的声幅值
         df_temp_formation_Start = df1.loc[(df1['井段Start'] <= formation_Start) & (
                 df1['井段End'] >= formation_Start), :]
@@ -329,6 +325,13 @@ class Main_window(QMainWindow, Ui_MainWindow):
         elif ratio_Series['不确定'] >= 1:
             evaluation_of_formation = '不确定'
         return ratio_Series, evaluation_of_formation
+
+    # 关于
+    def menubar_simple_instruction(self):
+        QMessageBox.information(self, "简单介绍", "主要实现了固井质量评价的成果表综合统计、拼接和分段统计、查询优中差比例等功能")
+
+    def menubar_author_info(self):
+        QMessageBox.information(self, "联系方式", "软件开发: 杨艺 \n电话：18580367621，邮箱：978030836@qq.com\n软件测试: 刘恒 王参文 何强")
 
     # 打开表格函数集合
     ##############################
@@ -918,8 +921,8 @@ class Main_window(QMainWindow, Ui_MainWindow):
         # 获取二界面单层评价表的深度界限
         df2 = pd.read_excel(fileDir2, header=2)
         df2.drop([0], inplace=True)
-        if df2.loc[1, '结论'] == '不确定':
-            df2.drop([1], inplace=True)
+        # if df2.loc[1, '结论'] == '不确定':
+        #     df2.drop([1], inplace=True)
         df2 = df2.dropna(axis=0, how='any')  # 删除dataframe里NaN的所有行
         df2.loc[:, '井段(m)'] = df2['井段(m)'].str.replace(' ', '')  # 消除数据中空格
         # if len(df2) % 2 == 0:#如果len(df2)为偶数需要删除最后一行NaN，一行的情况不用删
@@ -951,17 +954,16 @@ class Main_window(QMainWindow, Ui_MainWindow):
             j = i + 1
             evaluation_of_formation1 = self.layer_evaluation1(df1, list1[i], list1[j])[1]  # 调取一界面评价函数
             evaluation_of_formation2 = self.layer_evaluation2(df2, list1[i], list1[j])[1]  # 调取二界面评价函数
-            if evaluation_of_formation1 == '好' and evaluation_of_formation2 =='好' or evaluation_of_formation2 =='中' or evaluation_of_formation2 =='不确定':
+            if evaluation_of_formation1 == '好' and evaluation_of_formation2 in['好', '中', '不确定']:
                 evaluation_of_formation = '优'
             elif evaluation_of_formation1 == '中' and evaluation_of_formation2 =='好': #TODO
                 evaluation_of_formation = '优'
-            elif evaluation_of_formation1 == '中' and evaluation_of_formation2 =='中' or evaluation_of_formation2 =='不确定':
+            elif evaluation_of_formation1 == '中' and evaluation_of_formation2 in ['中', '不确定']:
                 evaluation_of_formation = '中等'
             elif evaluation_of_formation1 == '差' or evaluation_of_formation2 =='差':
                 evaluation_of_formation = '差'
             thickness = round(list1[j] - list1[i], 2)
             interval = '-'.join([('%.2f' % list1[i]), ('%.2f' % list1[j])])
-            ('%.2f' % list1[i])
             print(interval, thickness, evaluation_of_formation1, evaluation_of_formation2, evaluation_of_formation, '\n')
             series = pd.Series({"井段(m)": interval, "厚度(m)": thickness, "一界面评价": evaluation_of_formation1, "二界面评价": evaluation_of_formation2, "综合评价": evaluation_of_formation}, name=i+1)
             data = data.append(series)
@@ -974,6 +976,56 @@ class Main_window(QMainWindow, Ui_MainWindow):
         data.to_excel(writer, 'Sheet1')
         writer.save()
         QMessageBox.information(self, "提示", "运行完毕，请查看工区")
+
+    def search_for_statistic_result(self):
+        start_depth = float(self.lineEdit_51.text())
+        end_depth = float(self.lineEdit_54.text())
+
+        if self.lineEdit_50.text() != '' and self.lineEdit_55.text() != '':
+            QMessageBox.information(self, "提示", "暂不支持两个评价表同时统计，请删除一个后重试")
+        elif self.lineEdit_50.text() != '':
+            fileDir1 = self.lineEdit_50.text()
+
+            # 获取一界面单层评价表的深度界限
+            df1 = pd.read_excel(fileDir1, header=2)
+            df1.drop([0], inplace=True)
+            df1 = df1.dropna(axis=0, how='any')  # 删除dataframe里NaN的所有行
+            df1.loc[:, '井段(m)'] = df1['井段(m)'].str.replace(' ', '')  # 消除数据中空格
+            # if len(df1) % 2 == 0:#如果len(df1)为偶数需要删除最后一行NaN，一行的情况不用删
+            #     df1.drop([len(df1)], inplace=True)
+            df1['井段Start'] = df1['井段(m)'].map(lambda x: x.split("-")[0])
+            df1['井段End'] = df1['井段(m)'].map(lambda x: x.split("-")[1])
+            # 表格数据清洗
+            df1.loc[:, "井段Start"] = df1["井段Start"].str.replace(" ", "").astype('float')
+            df1.loc[:, "井段End"] = df1["井段End"].str.replace(" ", "").astype('float')
+            evaluation_of_formation1 = self.layer_evaluation1(df1, start_depth, end_depth)[0]  # 调取一界面评价函数
+            self.lineEdit_56.setText(('%.2f' % evaluation_of_formation1['好']))
+            self.lineEdit_57.setText(('%.2f' % evaluation_of_formation1['中']))
+            self.lineEdit_58.setText(('%.2f' % evaluation_of_formation1['差']))
+            not_sure = 100 - evaluation_of_formation1['好'] - evaluation_of_formation1['中'] - evaluation_of_formation1['差']
+            self.lineEdit_59.setText(('%.2f' % not_sure))
+
+        elif self.lineEdit_55.text() != '':
+            fileDir2 = self.lineEdit_55.text()
+
+            # 获取一界面单层评价表的深度界限
+            df1 = pd.read_excel(fileDir2, header=2)
+            df1.drop([0], inplace=True)
+            df1 = df1.dropna(axis=0, how='any')  # 删除dataframe里NaN的所有行
+            df1.loc[:, '井段(m)'] = df1['井段(m)'].str.replace(' ', '')  # 消除数据中空格
+            # if len(df1) % 2 == 0:#如果len(df1)为偶数需要删除最后一行NaN，一行的情况不用删
+            #     df1.drop([len(df1)], inplace=True)
+            df1['井段Start'] = df1['井段(m)'].map(lambda x: x.split("-")[0])
+            df1['井段End'] = df1['井段(m)'].map(lambda x: x.split("-")[1])
+            # 表格数据清洗
+            df1.loc[:, "井段Start"] = df1["井段Start"].str.replace(" ", "").astype('float')
+            df1.loc[:, "井段End"] = df1["井段End"].str.replace(" ", "").astype('float')
+            evaluation_of_formation2 = self.layer_evaluation2(df1, start_depth, end_depth)[0]  # 调取二界面评价函数
+            self.lineEdit_56.setText(('%.2f' % evaluation_of_formation2['好']))
+            self.lineEdit_57.setText(('%.2f' % evaluation_of_formation2['中']))
+            self.lineEdit_58.setText(('%.2f' % evaluation_of_formation2['差']))
+            not_sure = 100 - evaluation_of_formation2['好'] - evaluation_of_formation2['中'] - evaluation_of_formation2['差']
+            self.lineEdit_59.setText(('%.2f' % not_sure))
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

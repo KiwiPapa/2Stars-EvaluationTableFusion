@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>625</width>
-    <height>326</height>
+    <width>591</width>
+    <height>747</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,9 +17,9 @@
    <widget class="QLabel" name="label_125">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>260</y>
-      <width>201</width>
+      <x>390</x>
+      <y>0</y>
+      <width>191</width>
       <height>20</height>
      </rect>
     </property>
@@ -30,643 +30,647 @@
      <string>提示：请确认表格末尾无空行</string>
     </property>
    </widget>
-   <widget class="QStackedWidget" name="stackedWidget">
+   <widget class="QWidget" name="layoutWidget_5">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>601</width>
-      <height>241</height>
+      <x>40</x>
+      <y>140</y>
+      <width>531</width>
+      <height>70</height>
      </rect>
     </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;黑体&quot;;</string>
     </property>
-    <property name="currentIndex">
-     <number>0</number>
+    <layout class="QGridLayout" name="gridLayout_9">
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineEdit_53">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton_11">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>选择一界面评价表</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEdit_49">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pushButton_12">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>选择二界面评价表</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>100</y>
+      <width>239</width>
+      <height>25</height>
+     </rect>
     </property>
-    <widget class="QWidget" name="page_2">
-     <widget class="QWidget" name="">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>80</y>
-        <width>239</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="0">
-        <widget class="QPushButton" name="pushButton_53">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>查看工区</string>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>100</width>
-           <height>100</height>
-          </size>
-         </property>
-         <property name="checkable">
-          <bool>false</bool>
-         </property>
-         <property name="checked">
-          <bool>false</bool>
-         </property>
-         <property name="autoRepeat">
-          <bool>false</bool>
-         </property>
-         <property name="default">
-          <bool>false</bool>
-         </property>
-         <property name="flat">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QPushButton" name="pushButton_28">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>规范化</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QPushButton" name="pushButton_15">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>综合评价</string>
-         </property>
-         <property name="autoDefault">
-          <bool>false</bool>
-         </property>
-         <property name="default">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget_5">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>110</y>
-        <width>531</width>
-        <height>70</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_9">
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="lineEdit_53">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QPushButton" name="pushButton_11">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>选择一界面评价表</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEdit_49">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QPushButton" name="pushButton_12">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>选择二界面评价表</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QLabel" name="label_113">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>20</y>
-        <width>371</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 20pt &quot;黑体&quot;;</string>
-      </property>
-      <property name="text">
-       <string>固井质量综合评价（xls格式）</string>
-      </property>
-      <property name="textFormat">
-       <enum>Qt::PlainText</enum>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="page">
-     <widget class="QWidget" name="layoutWidget_3">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>70</y>
-        <width>211</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_20">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>拼接深度</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLabel" name="label_98">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>开始深度</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QLabel" name="label_99">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>结束深度</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLineEdit" name="lineEdit_45">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="lineEdit_46">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="2">
-        <widget class="QLineEdit" name="lineEdit_47">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>130</y>
-        <width>531</width>
-        <height>81</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_8">
-       <item row="0" column="0">
-        <widget class="QPushButton" name="pushButton_9">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>选择上段表格</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="lineEdit_52">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QPushButton" name="pushButton_10">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>选择下段表格</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEdit_48">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget_4">
-      <property name="geometry">
-       <rect>
-        <x>400</x>
-        <y>70</y>
-        <width>151</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_22">
-       <item row="1" column="1">
-        <widget class="QPushButton" name="pushButton_14">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>开始拼接</string>
-         </property>
-         <property name="autoDefault">
-          <bool>false</bool>
-         </property>
-         <property name="default">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QPushButton" name="pushButton_52">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>查看工区</string>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>100</width>
-           <height>100</height>
-          </size>
-         </property>
-         <property name="checkable">
-          <bool>false</bool>
-         </property>
-         <property name="checked">
-          <bool>false</bool>
-         </property>
-         <property name="autoRepeat">
-          <bool>false</bool>
-         </property>
-         <property name="default">
-          <bool>false</bool>
-         </property>
-         <property name="flat">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QPushButton" name="pushButton_29">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>重置</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QPushButton" name="pushButton_27">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>规范化</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget_2">
-      <property name="geometry">
-       <rect>
-        <x>250</x>
-        <y>70</y>
-        <width>70</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_19">
-       <item row="0" column="0">
-        <widget class="QRadioButton" name="radioButton">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>一界面</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QRadioButton" name="radioButton_2">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>二界面</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QLabel" name="label_114">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>10</y>
-        <width>371</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 15pt &quot;黑体&quot;;</string>
-      </property>
-      <property name="text">
-       <string>单层评价表拼接和分段统计（xls格式）</string>
-      </property>
-      <property name="textFormat">
-       <enum>Qt::PlainText</enum>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="page_3">
-     <widget class="QWidget" name="">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>70</y>
-        <width>141</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_2">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_100">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>开始深度</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLabel" name="label_101">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>结束深度</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLineEdit" name="lineEdit_51">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="lineEdit_54">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="">
-      <property name="geometry">
-       <rect>
-        <x>300</x>
-        <y>90</y>
-        <width>201</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_3">
-       <item row="0" column="2">
-        <widget class="QLineEdit" name="lineEdit_58">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEdit_57">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="3">
-        <widget class="QLineEdit" name="lineEdit_59">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLineEdit" name="lineEdit_56">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QPushButton" name="pushButton_16">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>80</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-      </property>
-      <property name="text">
-       <string>查询</string>
-      </property>
-      <property name="autoDefault">
-       <bool>false</bool>
-      </property>
-      <property name="default">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QWidget" name="">
-      <property name="geometry">
-       <rect>
-        <x>300</x>
-        <y>70</y>
-        <width>201</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_4">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_2">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>优</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLabel" name="label_102">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>中</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QLabel" name="label_103">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>差</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="3">
-        <widget class="QLabel" name="label_104">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>不确定</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget_6">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>130</y>
-        <width>531</width>
-        <height>70</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_10">
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="lineEdit_55">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QPushButton" name="pushButton_13">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>选择一界面评价表</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEdit_50">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QPushButton" name="pushButton_17">
-         <property name="styleSheet">
-          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>选择二界面评价表</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QLabel" name="label_115">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>10</y>
-        <width>321</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 15pt &quot;黑体&quot;;</string>
-      </property>
-      <property name="text">
-       <string>查询优中差比例小工具（xls格式）</string>
-      </property>
-      <property name="textFormat">
-       <enum>Qt::PlainText</enum>
-      </property>
-     </widget>
-    </widget>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton_53">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>查看工区</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>100</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="autoRepeat">
+        <bool>false</bool>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="pushButton_28">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>规范化</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="pushButton_15">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>综合评价</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+       <property name="default">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_113">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>30</y>
+      <width>371</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 20pt &quot;黑体&quot;;</string>
+    </property>
+    <property name="text">
+     <string>生成综合成果表（xls格式）</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>300</y>
+      <width>211</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_20">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>拼接深度</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_98">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>开始深度</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_99">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>结束深度</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLineEdit" name="lineEdit_45">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineEdit_46">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLineEdit" name="lineEdit_47">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>300</y>
+      <width>70</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_19">
+     <item row="0" column="0">
+      <widget class="QRadioButton" name="radioButton">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>一界面</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QRadioButton" name="radioButton_2">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>二界面</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>300</y>
+      <width>158</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_22">
+     <item row="1" column="1">
+      <widget class="QPushButton" name="pushButton_14">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>开始拼接</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+       <property name="default">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton_52">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>查看工区</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>100</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="autoRepeat">
+        <bool>false</bool>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="pushButton_29">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>重置</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pushButton_27">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>规范化</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>370</y>
+      <width>531</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_8">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton_9">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>选择上段表格</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineEdit_52">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pushButton_10">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>选择下段表格</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEdit_48">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_114">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>240</y>
+      <width>321</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 15pt &quot;黑体&quot;;</string>
+    </property>
+    <property name="text">
+     <string>成果表拼接和分段统计（xls格式）</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_115">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>480</y>
+      <width>321</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 15pt &quot;黑体&quot;;</string>
+    </property>
+    <property name="text">
+     <string>查询优中差比例小工具（xls格式）</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>530</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_100">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>开始深度</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_101">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>结束深度</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLineEdit" name="lineEdit_51">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineEdit_54">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton_16">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>540</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+    </property>
+    <property name="text">
+     <string>查询</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>530</y>
+      <width>221</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>优(%)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_102">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>中(%)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_103">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>差(%)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="label_104">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>不确定(%)</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>550</y>
+      <width>211</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="2">
+      <widget class="QLineEdit" name="lineEdit_58">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEdit_57">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLineEdit" name="lineEdit_59">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLineEdit" name="lineEdit_56">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_6">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>590</y>
+      <width>531</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_10">
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineEdit_55">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton_13">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>选择一界面评价表</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEdit_50">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pushButton_17">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>选择二界面评价表</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>470</y>
+      <width>591</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>220</y>
+      <width>591</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -674,12 +678,30 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>625</width>
+     <width>591</width>
      <height>23</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>关于</string>
+    </property>
+    <addaction name="action"/>
+    <addaction name="action_2"/>
+   </widget>
+   <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="action">
+   <property name="text">
+    <string>简介</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>联系</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
