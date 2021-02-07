@@ -956,7 +956,7 @@ class Main_window(QMainWindow, Ui_MainWindow):
             evaluation_of_formation2 = self.layer_evaluation2(df2, list1[i], list1[j])[1]  # 调取二界面评价函数
             if evaluation_of_formation1 == '好' and evaluation_of_formation2 in['好', '中', '不确定']:
                 evaluation_of_formation = '优'
-            elif evaluation_of_formation1 == '中' and evaluation_of_formation2 =='好': #TODO
+            elif evaluation_of_formation1 == '中' and evaluation_of_formation2 =='好':
                 evaluation_of_formation = '优'
             elif evaluation_of_formation1 == '中' and evaluation_of_formation2 in ['中', '不确定']:
                 evaluation_of_formation = '中等'
